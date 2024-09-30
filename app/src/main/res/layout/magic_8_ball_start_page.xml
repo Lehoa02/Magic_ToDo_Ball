@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MagicBall"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_1">
+
+
+
+
+    <!-- Big black circle representing the Magic 8 Ball -->
+    <FrameLayout
+        android:id="@+id/firstScene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:background="@drawable/shadow"
+        >
+
+
+        <!-- Small white circle inside the black circle -->
+        <FrameLayout
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_inside_shape"
+            >
+
+            <!-- Number 8 at the center -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="8"
+                android:textColor="#222"
+                android:textSize="50pt" />
+
+
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/secondScene"
+        android:layout_width="350dp"
+        android:layout_height="344dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shadow"
+        android:visibility="gone"
+        >
+
+
+        <FrameLayout
+            android:id="@+id/BlackBallSc2"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_inside_frame"
+            >
+            <FrameLayout
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center">
+            <FrameLayout
+                android:layout_marginTop="17dp"
+                android:layout_height="140dp"
+                android:layout_width="140dp"
+                android:layout_gravity="center"
+                android:background="@drawable/blue_triangle"
+
+                >
+
+                <TextView
+                    android:id="@+id/text_in_triangle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif-black"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </FrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".MainActivity"
+        >
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+
+
+        <EditText
+            android:id="@+id/todoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:hint="Enter your to-do task"
+            android:fontFamily="sans-serif-black"
+            android:textSize="10pt"
+           />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/todoEditText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="Add Task"
+            android:fontFamily="sans-serif-black"
+            android:textSize="10pt"/>
+
+        <Button
+            android:id="@+id/completedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:text="Completed"
+            android:layout_marginBottom="50dp"
+            android:textSize="13pt"
+            android:fontFamily="sans-serif-black"
+            android:visibility="gone"
+             />
+
+
+        <!-- Other views or content in your layout -->
+
+        <nl.dionsegijn.konfetti.xml.KonfettiView
+            android:id="@+id/konfetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+</FrameLayout>
